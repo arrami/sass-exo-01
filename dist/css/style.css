@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* déclarer une variable */
+main {
+  border: 2px solid;
+  padding: 1em;
+}
+main h1 {
+  color: rgb(0, 183, 255);
+  font-size: 3rem;
+}
+@media screen and (min-width: 960px) {
+  main h1 {
+    font-size: 5rem;
+  }
+}
+main .section1 {
+  width: 200px;
+  background-color: orangered;
+  padding: 1em;
+}
+main .section1 p span {
+  color: salmon;
+  font-size: 1rem;
+}
+main .section2 {
+  width: 100px;
+  background-color: yellow;
+  padding: 1em;
+  transform: rotate(30deg);
+}
+main .section2 p span {
+  color: salmon;
+  font-size: 1rem;
+}
+main a {
+  color: rgb(0, 183, 255);
+  font-size: 2rem;
+}
+main a:hover {
+  color: salmon;
+}
+
+/*# sourceMappingURL=style.css.map */

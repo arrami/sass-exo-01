@@ -1,0 +1,19 @@
+// Aide à factoriser le code
+
+@use "../partials/variables" as *;
+
+// fonction avec des parenthèses pour paramètres
+// nom le plus simple possible
+@mixin box($largeur, $bg) {
+  //Propriétés qui se répètent
+  width: $largeur;
+  background-color: $bg;
+  padding: 1em; 
+  // placer les propriétés CSS factorisées
+  p {
+    span {
+      color: salmon;
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@use "partials/variables" as *;
+
+@use "mixins/box" as *;
+@use "mixins/transform" as *;
+@use "mixins/min-desktop" as *;
+
+//CSS global Ne pas afficher le commentaire à la compilation
+
+main {
+  border: 2px solid;
+  padding: 1em;
+
+  h1 {
+    color: $blue;
+    // Affecter une variable et réaliser des opérations 
+    font-size: 3 * $taille;
+    // media querie simple sans mixin
+    //@media screen and (min-width: 960px) {
+    //  font-size: 5 * $taille;
+    //}
+    @include min-desktop {
+ 
+      font-size: 5 * $taille;
+
+    }
+
+  }
+
+  .section1 {
+    //Appel de la mixin
+    @include box(200px, orangered);
+  }
+  .section2 {
+    //Appel de la mixin
+    @include box(100px, yellow);
+    @include transform(rotate(30deg));
+  }
+
+  // Créer une pseudo-classe
+  a {
+    color: $blue;
+    font-size: 2 * $taille;
+    &:hover {
+      color: $salmon;
+    }
+  }
+}
